@@ -45,7 +45,7 @@
      Activities  是一个UIActivity对象的数组，代表了应用程序支持的自定义服务。这个参数可以是nil。
      
      */
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:activities];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
     
     //UIActivityViewControllerCompletionWithItemsHandler)(NSString * __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError)  iOS >=8.0
     
@@ -156,6 +156,7 @@
     
     //发送邮件
     MFMailComposeViewController *mailComposeViewController = [[MFMailComposeViewController alloc] init];
+    [mailComposeViewController addAttachmentData:nil mimeType:nil fileName:nil];
     [mailComposeViewController setToRecipients:@[@"mattt@nshipster•com"]];
     [mailComposeViewController setSubject:@"WSL"];
     [mailComposeViewController setMessageBody:@"Lorem ipsum dolor sit amet"

@@ -17,6 +17,7 @@
 		3157F6E91D75123D00EF399A /* UIActivityViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3157F6E81D75123D00EF399A /* UIActivityViewControllerUITests.m */; };
 		3157F6FA1D75328B00EF399A /* customActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3157F6F91D75328B00EF399A /* customActivity.m */; };
 		3157F6FC1D756EEB00EF399A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3157F6FB1D756EEB00EF399A /* Social.framework */; };
+		31ACAA4D1FF4865000CFF891 /* wang.png in Resources */ = {isa = PBXBuildFile; fileRef = 31ACAA4C1FF4865000CFF891 /* wang.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3157F6F81D75328B00EF399A /* customActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customActivity.h; sourceTree = "<group>"; };
 		3157F6F91D75328B00EF399A /* customActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customActivity.m; sourceTree = "<group>"; };
 		3157F6FB1D756EEB00EF399A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		31ACAA4C1FF4865000CFF891 /* wang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wang.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 		3157F6C21D75123D00EF399A /* UIActivityViewController */ = {
 			isa = PBXGroup;
 			children = (
+				31ACAA4C1FF4865000CFF891 /* wang.png */,
 				3157F6F81D75328B00EF399A /* customActivity.h */,
 				3157F6F91D75328B00EF399A /* customActivity.m */,
 				3157F6C61D75123D00EF399A /* AppDelegate.h */,
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31ACAA4D1FF4865000CFF891 /* wang.png in Resources */,
 				3157F6D31D75123D00EF399A /* LaunchScreen.storyboard in Resources */,
 				3157F6D01D75123D00EF399A /* Assets.xcassets in Resources */,
 				3157F6CE1D75123D00EF399A /* Main.storyboard in Resources */,
