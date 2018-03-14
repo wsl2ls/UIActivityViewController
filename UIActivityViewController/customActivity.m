@@ -13,12 +13,13 @@
 
 - (instancetype)initWithTitie:(NSString *)title withActivityImage:(UIImage *)image withUrl:(NSURL *)url withType:(NSString *)type withShareContext:(NSArray *)shareContexts{
     
-    _title = title;
-    _image = image;
-    _url = url;
-    _type = type;
-    _shareContexts = shareContexts;
-    
+    if(self == [super init]){
+        _title = title;
+        _image = image;
+        _url = url;
+        _type = type;
+        _shareContexts = shareContexts;
+    }
     return self;
     
 }
@@ -47,7 +48,10 @@
 }
 
 - (BOOL)canPerformWithActivityItems:(NSArray *)activityItems {
-    return YES;
+    if (activityItems.count > 0) {
+        return YES;
+    }
+    return NO;
 }
 
 - (void)prepareWithActivityItems:(NSArray *)activityItems {

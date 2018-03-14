@@ -34,8 +34,8 @@
     NSArray *activityItems = @[urlToShare,textToShare,imageToShare];
     
     //自定义Activity
-    customActivity * custom = [[customActivity alloc] initWithTitie:@"且行且珍惜_iOS" withActivityImage:[UIImage imageNamed:@"wang"] withUrl:urlToShare withType:@"customActivity" withShareContext:activityItems];
-    NSArray *activities = @[custom];
+    customActivity * customActivit = [[customActivity alloc] initWithTitie:@"且行且珍惜_iOS" withActivityImage:[UIImage imageNamed:@"wang.png"] withUrl:urlToShare withType:@"customActivity" withShareContext:activityItems];
+    NSArray *activities = @[customActivit];
     
     /**
      创建分享视图控制器
@@ -45,7 +45,7 @@
      Activities  是一个UIActivity对象的数组，代表了应用程序支持的自定义服务。这个参数可以是nil。
      
      */
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:activityItems applicationActivities:nil];
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:activities];
     
     //UIActivityViewControllerCompletionWithItemsHandler)(NSString * __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError)  iOS >=8.0
     

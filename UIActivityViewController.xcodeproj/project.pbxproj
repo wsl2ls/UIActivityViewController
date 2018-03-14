@@ -17,6 +17,7 @@
 		3157F6E91D75123D00EF399A /* UIActivityViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3157F6E81D75123D00EF399A /* UIActivityViewControllerUITests.m */; };
 		3157F6FA1D75328B00EF399A /* customActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3157F6F91D75328B00EF399A /* customActivity.m */; };
 		3157F6FC1D756EEB00EF399A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3157F6FB1D756EEB00EF399A /* Social.framework */; };
+		31A2788F2058C640003F3006 /* wang.png in Sources */ = {isa = PBXBuildFile; fileRef = 31ACAA4C1FF4865000CFF891 /* wang.png */; };
 		31ACAA4D1FF4865000CFF891 /* wang.png in Resources */ = {isa = PBXBuildFile; fileRef = 31ACAA4C1FF4865000CFF891 /* wang.png */; };
 /* End PBXBuildFile section */
 
@@ -219,6 +220,7 @@
 				TargetAttributes = {
 					3157F6BF1D75123D00EF399A = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = HQDTGRH8YR;
 					};
 					3157F6D81D75123D00EF399A = {
 						CreatedOnToolsVersion = 7.3;
@@ -283,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31A2788F2058C640003F3006 /* wang.png in Sources */,
 				3157F6CB1D75123D00EF399A /* ViewController.m in Sources */,
 				3157F6C81D75123D00EF399A /* AppDelegate.m in Sources */,
 				3157F6C51D75123D00EF399A /* main.m in Sources */,
@@ -434,10 +437,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: China Daily";
+				DEVELOPMENT_TEAM = HQDTGRH8YR;
 				INFOPLIST_FILE = UIActivityViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinaDaily.UIActivityViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3022966d-393a-453d-9a18-cceb1425613d";
+				PROVISIONING_PROFILE_SPECIFIER = "China Daily Test";
 			};
 			name = Debug;
 		};
@@ -447,10 +453,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: China Daily";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: China Daily";
+				DEVELOPMENT_TEAM = HQDTGRH8YR;
 				INFOPLIST_FILE = UIActivityViewController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chinaDaily.UIActivityViewController;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chinadaily.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3022966d-393a-453d-9a18-cceb1425613d";
+				PROVISIONING_PROFILE_SPECIFIER = "China Daily Test";
 			};
 			name = Release;
 		};
