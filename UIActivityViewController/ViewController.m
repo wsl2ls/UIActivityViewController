@@ -24,6 +24,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+- (IBAction)shareToWSL:(id)sender {
+    
+    //不带参数
+     NSString * wslUrlScheme = @"WSLAPP://";
+    //如果参数含有特殊字符或汉字，需要转码，否则这个URL不合法，就会唤起失败；参数字符串的格式可以自定义，只要便于自己到时候解析就行；
+    NSString * parameterStr = [@"wsl，你是猴子请来的救兵吗？" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    //不带参数
+//    NSURL * url = [NSURL URLWithString:wslScheme];
+    //带参数
+    //WSLAPP://name=wsl&weight=保密
+    NSURL * url = [NSURL URLWithString:[wslUrlScheme stringByAppendingString:parameterStr]];
+    
+    //iOS 10以下
+//    [[UIApplication sharedApplication] openURL:url];
+    //iOS 10以上
+    [[UIApplication sharedApplication] openURL:url options:nil completionHandler:^(BOOL success) {
+    }];
+    
+}
 
 - (IBAction)shareBtnClicked:(id)sender {
     
@@ -182,6 +202,8 @@
 //苹果自带的分享界面
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
+    return;
+    
     //[SLComposeViewController isAvailableForServiceType: @"com.tencent.xin.sharetimeline"];微信
     
     
@@ -217,6 +239,49 @@
     
 }
 
+// 图片转字符串
+- (NSString * )imageToString:(UIImage *)image{
+    NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+    NSString *imageDataString = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    return imageDataString;
+}
+
+// 字符串转图片
+- (UIImage *)imageFromString:(NSString *)string{
+    NSData *data=[[NSData alloc] initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    UIImage *image = [UIImage imageWithData:data];
+    return image;
+}
+
+//字典转json格式字符串：
+- (NSString*)dictionaryToJson:(NSDictionary *)dic
+{
+    NSError *parseError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
+//json格式字符串转字典：
+- (NSDictionary *)dictionaryWithJsonString:(NSString *)jsonString {
+    
+    if (jsonString == nil) {
+        return nil;
+    }
+    
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:jsonData
+                         
+                                                        options:NSJSONReadingMutableContainers
+                         
+                                                          error:&err];
+    
+    if(err) {
+        NSLog(@"json解析失败：%@",err);
+        return nil;
+    }
+    return dic;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

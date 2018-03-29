@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,28 +19,53 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5P-2Y-rTG">
-                                <rect key="frame" x="239" y="256" width="90" height="87"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5P-2Y-rTG">
+                                <rect key="frame" x="142" y="169" width="90" height="87"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="h1n-70-87C"/>
+                                    <constraint firstAttribute="height" constant="87" id="vX7-sN-VNL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="分享"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="155" y="256" width="90" height="87"/>
-                                </variation>
                                 <connections>
                                     <action selector="shareBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NMM-Ft-nwH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbk-gJ-zul">
+                                <rect key="frame" x="118" y="338" width="138" height="77"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="138" id="6gG-Ua-0aH"/>
+                                    <constraint firstAttribute="height" constant="77" id="a1S-99-LcU"/>
+                                </constraints>
+                                <state key="normal" title="分享到WSL">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareToWSL:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eaP-bL-XDO"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tbk-gJ-zul" firstAttribute="top" secondItem="v5P-2Y-rTG" secondAttribute="bottom" constant="82" id="8eu-aR-0aq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tbk-gJ-zul" secondAttribute="trailing" constant="103" id="O6I-rU-PEd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tbk-gJ-zul" secondAttribute="bottom" constant="252" id="OP4-Zk-b4g"/>
+                            <constraint firstItem="tbk-gJ-zul" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="102" id="PEx-qA-qAB"/>
+                            <constraint firstItem="v5P-2Y-rTG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="126" id="csd-30-gXj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v5P-2Y-rTG" secondAttribute="trailing" constant="127" id="lGx-Zv-qay"/>
+                            <constraint firstItem="tbk-gJ-zul" firstAttribute="top" secondItem="v5P-2Y-rTG" secondAttribute="bottom" constant="82" id="vXy-4j-cmG"/>
+                            <constraint firstItem="v5P-2Y-rTG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="149" id="zB3-Ib-8h8"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="429"/>
+            <point key="canvasLocation" x="301.60000000000002" y="11.244377811094454"/>
         </scene>
     </scenes>
 </document>
