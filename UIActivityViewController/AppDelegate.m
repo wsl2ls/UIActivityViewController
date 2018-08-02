@@ -17,6 +17,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    //第三方应用打开本应用启动
+    if(launchOptions[UIApplicationLaunchOptionsURLKey] != nil){
+        [self application:application handleOpenURL:launchOptions[UIApplicationLaunchOptionsURLKey]];
+    }
+    
     return YES;
 }
 
@@ -43,7 +50,7 @@
 }
 
 /**
- iOS 9.0 以下
+ iOS 9.0 以下 程序运行过程中调用
  */
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
     
@@ -53,7 +60,7 @@
 }
 
 /**
- iOS 9.0 之后
+ iOS 9.0 之后 程序运行过程中调用
  */
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
     
