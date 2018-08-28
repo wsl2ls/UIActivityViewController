@@ -1,3 +1,6 @@
+ 
+简书地址： https://www.jianshu.com/p/b6b44662dfda
+
  > 利用UIActivityViewController实现系统原生分享，不需要三方SDK，支持自定义分享，可以分享到微博、微信、QQ、信息、邮件、备忘录、通讯录、剪贴板、FaceBook.....等等  [示例Github](https://github.com/wslcmk/UIActivityViewController.git)
 
 > 注意：iOS10之前需要在系统设置中登陆Facebook和twwiter账号才能分享，iOS10之后就不 支持原生分享facebook和twwiter了，需要嵌入官方的sdk，自定义UIActivity才行。
