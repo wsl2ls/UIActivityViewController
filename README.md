@@ -6,6 +6,7 @@
 > 注意：iOS10之前需要在系统设置中登陆Facebook和twwiter账号才能分享，iOS10之后就不 支持原生分享facebook和twwiter了，需要嵌入官方的sdk，自定义UIActivity才行。
 
 效果图，诸位请看：
+
 ![效果1.gif](http://upload-images.jianshu.io/upload_images/1708447-2417de6295f29f14.gif?imageMogr2/auto-orient/strip)
 
 
@@ -198,8 +199,16 @@
 
 ![亲，赞一下，给个star.gif](http://upload-images.jianshu.io/upload_images/1708447-0c218b4b69db52b3.gif?imageMogr2/auto-orient/strip)
 
+## Welcome To Follow Me
 
-欢迎扫描下方二维码关注——iOS开发进阶之路——微信公众号：iOS2679114653
+>  您的follow和start，是我前进的动力，Thanks♪(･ω･)ﾉ
+> * [简书](https://www.jianshu.com/u/e15d1f644bea)
+> * [微博](https://weibo.com/5732733120/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1)
+> * [掘金](https://juejin.im/user/5c00d97b6fb9a049fb436288)
+> * [CSDN](https://blog.csdn.net/wsl2ls)
+> * QQ交流群：835303405
+
+> 欢迎扫描下方二维码关注——iOS开发进阶之路——微信公众号：iOS2679114653
 本公众号是一个iOS开发者们的分享，交流，学习平台，会不定时的发送技术干货，源码,也欢迎大家积极踊跃投稿，(择优上头条) ^_^分享自己开发攻城的过程，心得，相互学习，共同进步，成为攻城狮中的翘楚！
 
 ![微信公众号：iOS2679114653.jpg](http://upload-images.jianshu.io/upload_images/1708447-cc84ff7ef01c513a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
