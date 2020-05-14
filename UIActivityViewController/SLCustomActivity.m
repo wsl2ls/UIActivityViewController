@@ -1,14 +1,14 @@
 //
-//  customActivity.m
+//  SLCustomActivity.m
 //  UIActivityViewController
 //
 //  Created by 王双龙 on 16/8/30.
 //  Copyright © 2016年 http://www.jianshu.com/users/e15d1f644bea All rights reserved.
 //
 
-#import "customActivity.h"
+#import "SLCustomActivity.h"
 
-@implementation customActivity
+@implementation SLCustomActivity
 
 
 - (instancetype)initWithTitie:(NSString *)title withActivityImage:(UIImage *)image withUrl:(NSURL *)url withType:(NSString *)type withShareContext:(NSArray *)shareContexts{
@@ -62,7 +62,7 @@
 - (void)performActivity {
     
     //用safari打开网址
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/wslcmk"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/wsl2ls"]];
     
     //这里就可以关联外面的app进行分享操作了
     //也可以进行一些数据的保存等操作

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "customActivity.h"
+#import "SLCustomActivity.h"
 
 #import <Social/Social.h>
 @import SafariServices;
@@ -54,7 +54,7 @@
     NSArray *activityItems = @[urlToShare,textToShare,imageToShare];
     
     //自定义Activity
-    customActivity * customActivit = [[customActivity alloc] initWithTitie:@"且行且珍惜_iOS" withActivityImage:[UIImage imageNamed:@"wang.png"] withUrl:urlToShare withType:@"customActivity" withShareContext:activityItems];
+    SLCustomActivity * customActivit = [[SLCustomActivity alloc] initWithTitie:@"且行且珍惜_iOS" withActivityImage:[UIImage imageNamed:@"wang.png"] withUrl:urlToShare withType:@"CustomActivity" withShareContext:activityItems];
     NSArray *activities = @[customActivit];
     
     /**

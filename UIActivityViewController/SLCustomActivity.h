@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface customActivity : UIActivity
+@interface SLCustomActivity : UIActivity
 
 @property (nonatomic, copy) NSString * title;
 
