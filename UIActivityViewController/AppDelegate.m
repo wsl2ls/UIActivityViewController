@@ -23,6 +23,7 @@
     if(launchOptions[UIApplicationLaunchOptionsURLKey] != nil){
         [self application:application handleOpenURL:launchOptions[UIApplicationLaunchOptionsURLKey]];
     }
+    NSLog(@"打印结果");
     
     return YES;
 }
