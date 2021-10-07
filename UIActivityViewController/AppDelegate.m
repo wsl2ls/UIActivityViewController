@@ -23,7 +23,7 @@
     if(launchOptions[UIApplicationLaunchOptionsURLKey] != nil){
         [self application:application handleOpenURL:launchOptions[UIApplicationLaunchOptionsURLKey]];
     }
-    NSLog(@"打印结果");
+    NSLog(@"这是一个自定义的弹框");
     
     return YES;
 }
